@@ -109,7 +109,7 @@ class BiliUser:
             if not self.config['ASYNC']:
                 self.log.log("INFO", "同步点赞任务开始....")
                 for index, medal in enumerate(failedMedals):
-                    for i in range(30):
+                    for i in range(300):
                         tasks = []
                         tasks.append(
                             self.api.likeInteractV3(medal['room_info']['room_id'], medal['medal']['target_id'],self.mid)
@@ -122,7 +122,7 @@ class BiliUser:
                     )
             else:
                 self.log.log("INFO", "异步点赞任务开始....")
-                for i in range(35):
+                for i in range(350):
                     allTasks = []
                     for medal in failedMedals:
                         allTasks.append(
