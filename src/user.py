@@ -122,7 +122,7 @@ class BiliUser:
                     )
             else:
                 self.log.log("INFO", "异步点赞任务开始....")
-                for i in range(350):
+                for i in range(300):
                     allTasks = []
                     for medal in failedMedals:
                         allTasks.append(
